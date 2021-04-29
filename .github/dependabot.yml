@@ -1,0 +1,53 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "02:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - lewisgoddard
+  - btkostner
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: core-js
+    versions:
+    - 3.10.0
+    - 3.10.1
+    - 3.8.3
+    - 3.9.0
+    - 3.9.1
+  - dependency-name: stylelint
+    versions:
+    - 13.10.0
+    - 13.11.0
+    - 13.12.0
+    - 13.9.0
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+- package-ecosystem: composer
+  directory: "/_backend"
+  schedule:
+    interval: weekly
+    time: "02:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - lewisgoddard
+  - btkostner
+  labels:
+  - dependencies
+  ignore:
+  - dependency-name: stripe/stripe-php
+    versions:
+    - 7.69.0
+    - 7.71.0
+    - 7.72.0
+    - 7.74.0
+    - 7.75.0
+    - 7.76.0
